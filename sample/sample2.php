@@ -39,7 +39,16 @@ echo $array['Sun'];   // Sunday が出力される
 echo $array['Mon'];   // Monday が出力される
 echo $array['Tue'];   // Tuesday が出力される
 
+
+// 配列を使ったループ
 $color_list = array("Red", "Green", "Blue");
+
+// for
+for ($i = 0; $i < count($color_list); $i++) {
+    echo "$color_list[$i]\n"; // Red, Green, Blue が表示される
+}
+
+// 拡張for
 foreach ($color_list as $color) {
-    echo "$color\n";                        // Red, Green, Blue が表示される
+    echo "$color\n"; // Red, Green, Blue が表示される                       
 }
