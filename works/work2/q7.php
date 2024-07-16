@@ -8,5 +8,17 @@
 
 // 出力例 「johnの評価は良です」
 
-$scores = array("John" => 85, "Jane" => 92, "Jim" => 78);
-foreach ($scores as $suuji)
+$scores = array("John" => 85, "Jane" => 92, "Jim" => 58);
+
+foreach ($scores as $name => $score) {
+
+    if ($score >= 90) {
+        echo "$name", "の評価は優です\n";
+    } elseif ($score >= 80 && $score < 90) {
+        echo "$name", "の評価は良です\n";
+    } elseif ($score >= 70 && $score < 80) {
+        echo "$name", "の評価は可です\n";
+    } else {
+        echo "$name", "の評価は不可です\n";
+    }
+}
