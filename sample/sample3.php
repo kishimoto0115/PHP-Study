@@ -13,9 +13,9 @@ function logMessage()
 }
 
 //例2 引数(ひきすう)あり 戻り値なし ====================================================
-message("関数を呼び出しました"); // 関数を呼び出しました と出力される
+showMessage("関数を呼び出しました"); // 関数を呼び出しました と出力される
 
-function message($message)
+function showMessage($message)
 {
     echo $message;
 }
