@@ -15,9 +15,10 @@ $mainUser->setAge(30);
 showUserStatus($mainUser);
 showUserStatus($subUser);
 
-function showUserStatus($user) {
-    echo "========ユーザー情報========" ."\n";
-    echo "ID: ".$user->getId()."\n";
-    echo "名前: ".$user->getName()."\n";
-    echo "年齢: ".$user->getAge()."\n";
+function showUserStatus($user)
+{
+    echo "========ユーザー情報========" . "\n";
+    echo "ID: " . $user->getId() . "\n";
+    echo "名前: " . $user->getName() . "\n";
+    echo "年齢: " . $user->getAge() . "\n";
 }

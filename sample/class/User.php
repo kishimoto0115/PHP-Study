@@ -1,5 +1,6 @@
 <?php
-class User {
+class User
+{
 
     // ↓フィールド============================
     private $id;
@@ -8,34 +9,40 @@ class User {
     // ↑フィールド============================
 
     // コンストラクタ
-    function __construct($id, $name, $age) {
+    function __construct($id, $name, $age)
+    {
         $this->id = $id;
         $this->name = $name;
         $this->age = $age;
     }
 
     // idを取得
-    function getId() {
+    function getId()
+    {
         return $this->id;
     }
 
     // 名前を変更
-    function setName($name) {
+    function setName($name)
+    {
         $this->name = $name;
     }
 
     // 名前を取得
-    function getName() {
+    function getName()
+    {
         return $this->name;
     }
 
     // 年齢を変更
-    function setAge($age) {
+    function setAge($age)
+    {
         $this->age = $age;
     }
 
     // 年齢を取得
-    function getAge() {
+    function getAge()
+    {
         return $this->age;
     }
 }

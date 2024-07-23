@@ -1,5 +1,6 @@
 <?php
-class Gun {
+class Gun
+{
 
     // ↓フィールド============================
     // 銃の名前
@@ -11,36 +12,45 @@ class Gun {
     // ↑フィールド============================
 
     // コンストラクタ
-    function __construct($name, $maxMagazine) {
+    function __construct($name, $maxMagazine)
+    {
         // 問題1
+        $this->name = $name;
+        $this->maxMagazine = $maxMagazine;
+        $this->currentMagazine = $currentMagazine = $x;
     }
 
     // 現在の状態を表示
-    function echoStatus() {
-        echo "======現在の状態======". "\n";
+    function echoStatus()
+    {
+        echo "======現在の状態======" . "\n";
         echo "武器名: " . $this->name . "\n";
         echo "最大装弾数: " . $this->maxMagazine . "\n";
         echo "残弾数: " . $this->currentMagazine . "\n";
-        echo "======================". "\n";
+        echo "======================" . "\n";
     }
 
     // リロード
-    function relaod() {
+    function relaod()
+    {
         // 問題2
     }
 
     // 発砲
-    function fire() {
+    function fire()
+    {
         // 問題3
     }
 
     // 拡張マガジンを装着
-    function setExtendedMagazine() {
+    function setExtendedMagazine()
+    {
         // 問題4
     }
 
     // 拡張マガジンを取外し
-    function unsetExtendedMagazine() {
+    function unsetExtendedMagazine()
+    {
         // 問題4
     }
 }
