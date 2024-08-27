@@ -17,7 +17,7 @@ class Gun
         // 問題1
         $this->name = $name;
         $this->maxMagazine = $maxMagazine;
-        $this->currentMagazine = $currentMagazine = $x;
+        $this->currentMagazine  = 0;
     }
 
     // 現在の状態を表示
@@ -31,15 +31,32 @@ class Gun
     }
 
     // リロード
+
     function relaod()
     {
         // 問題2
+        if ($this->currentMagazine >= $this->maxMagazine) {
+            echo "リロードの必要はありません\n";
+            return;
+        }
+
+        $this->currentMagazine = $this->maxMagazine;
     }
+
 
     // 発砲
     function fire()
     {
         // 問題3
+        if ($this->currentMagazine == 0) {
+            echo "リロードしてください\n";
+        } else {
+            $this->currentMagazine = $this->currentMagazine - 1;
+            echo "$this->name を発砲しました。残弾: $this->currentMagazine\n";
+        }
+        if ($this->currentMagazine == 0) {
+            echo "リロードしてください\n";
+        }
     }
 
     // 拡張マガジンを装着
