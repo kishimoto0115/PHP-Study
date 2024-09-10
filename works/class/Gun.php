@@ -10,9 +10,8 @@ class Gun
     // 残弾
     private $currentMagazine;
     // 拡張マガジン
-    private $setExtendedMagazine;
-    // 拡張マガジン外し
-    private $unsetExtendedMagazine;
+    private $extendedMagazine;
+
     // ↑フィールド============================
 
     // コンストラクタ
@@ -22,8 +21,7 @@ class Gun
         $this->name = $name;
         $this->maxMagazine = $maxMagazine;
         $this->currentMagazine  = 0;
-        $this->setExtendedMagazine;
-        $this->unsetExtendedMagazine;
+        $this->extendedMagazine = 0;
     }
 
     // 現在の状態を表示
@@ -66,14 +64,17 @@ class Gun
     }
 
     // 拡張マガジンを装着
-    function setExtendedMagazine()
+    function setExtendedMagazine($x)
     {
         // 問題4
-        if ($this->setExtendedMagazine <= 0) {
-            echo "引数が不正です\n";
+        if ($x < 0) {
+            echo "引数は不正です\n";
+            return;
         }
 
-        $this->maxMagazine = $this->maxMagazine + $this->setExtendedMagazine;
+
+        $this->maxMagazine = $this->maxMagazine + $x;
+        $this->extendedMagazine = $x;
         return;
     }
 
@@ -81,10 +82,12 @@ class Gun
     function unsetExtendedMagazine()
     {
         // 問題4
-        if ($this->maxMagazine == 30) {
+
+        if ($this->extendedMagazine == 0) {
             echo "拡張マガジンは装着されていません\n";
             return;
         }
-        $this->maxMagazine >= $this->currentMagazine;
+        $this->maxMagazine = $this->maxMagazine - $this->extendedMagazine;
+        $this->currentMagazine = $this->maxMagazine;
     }
 }
